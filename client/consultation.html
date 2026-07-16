@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>New Consultation | DocAssist AI+</title>
+
+<link rel="stylesheet" href="css/consultation.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🩺 New Consultation</h1>
+
+<form id="consultationForm">
+
+<h2>Patient Details</h2>
+
+<input type="text" id="patientName" placeholder="Patient Name" required>
+
+<input type="number" id="age" placeholder="Age">
+
+<input type="text" id="weight" placeholder="Weight">
+
+<input type="text" id="height" placeholder="Height">
+
+<hr>
+
+<h2>Medical History</h2>
+
+<input
+type="text"
+id="existingDiseases"
+placeholder="Existing Diseases (Diabetes, Asthma, Hypertension...)">
+
+<input
+type="text"
+id="currentMedications"
+placeholder="Current Medicines">
+
+<input
+type="text"
+id="allergies"
+placeholder="Drug Allergies">
+
+<h2>Symptoms</h2>
+
+<textarea
+id="symptoms"
+rows="5"
+placeholder="Enter Symptoms"></textarea>
+
+<hr>
+
+<h2>Diagnosis</h2>
+
+<input
+type="text"
+id="diagnosis"
+placeholder="Diagnosis">
+
+<hr>
+
+<h2>Prescription</h2>
+
+<textarea
+id="prescription"
+rows="5"
+placeholder="Prescription"></textarea>
+
+<hr>
+
+<h2>AI Drug Safety Check</h2>
+
+<textarea
+id="safetyResult"
+rows="8"
+readonly>
+</textarea>
+
+<button
+type="button"
+id="checkSafety">
+🛡 Check Safety
+</button>
+
+<h2>Doctor Notes</h2>
+
+<textarea
+id="notes"
+rows="6"
+placeholder="Additional Notes"></textarea>
+
+<div class="buttons">
+
+<button
+type="button"
+id="generateAI">
+🤖 Generate AI Notes
+</button>
+
+<button
+type="submit">
+💾 Save Consultation
+</button>
+
+</div>
+
+</form>
+
+<h2>AI Generated SOAP Notes</h2>
+
+<textarea
+id="soap"
+rows="12"
+readonly></textarea>
+
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/consultation.js"></script>
+
+</body>
+
+</html>

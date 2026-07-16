@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard | DocAssist AI+</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <div class="sidebar">
+
+        <h2>🏥 DocAssist AI+</h2>
+
+        <ul>
+
+            <li><a href="#">🏠 Dashboard</a></li>
+
+            <li><a href="add-patient.html">👥 Add Patient</a></li>
+
+            <li><a href="consultation.html">🩺 Consultation</a></li>
+
+           <li><a href="consultation-history.html">📄 Reports</a></li>
+
+            <li><a href="#">👤 Profile</a></li>
+
+            <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+
+        </ul>
+
+    </div>
+
+    <!-- Main -->
+
+    <div class="main">
+
+        <h1 id="doctorName">Welcome Doctor 👋</h1>
+
+        <p>AI Powered Clinical Documentation Platform</p>
+
+        <div class="cards">
+
+     <div class="card">
+    <h2 id="totalPatients">0</h2>
+    <p>Total Patients</p>
+</div>
+
+<div class="card">
+    <h2 id="todayConsultations">0</h2>
+    <p>Today's Consultations</p>
+</div>
+
+<div class="card">
+    <h2 id="reportsGenerated">0</h2>
+    <p>Reports Generated</p>
+</div>
+
+
+
+        </div>
+
+        <div class="quick-actions">
+
+            <h2>Quick Actions</h2>
+
+            <button onclick="location.href='add-patient.html'">
+                ➕ Add Patient
+            </button>
+
+            <button onclick="location.href='consultation.html'">
+                🩺 New Consultation
+            </button>
+
+           <button onclick="location.href='consultation-history.html'">
+               📄 Reports
+           </button>
+
+        </div>
+        
+<div class="activity">
+
+<h2>🟡 Waiting Patients</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Patient</th>
+<th>Disease</th>
+<th>Status</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="waitingPatients">
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="activity">
+
+    <h2>Completed Consultations</h2>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Patient</th>
+                <th>Diagnosis</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody id="recentActivity">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+    </div>
+
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
